@@ -14,3 +14,23 @@ class Solution {
         return res;
     }
 }
+
+//744
+
+class Solution {
+    public char nextGreatestLetter(char[] letters, char target) {
+        int start = 0, end = letters.length-1, len = letters.length;
+        int mid = start + (end - start)/2;
+        
+        while(start<=end){
+            if(letters[mid] > target){
+                end = mid - 1 ; 
+            }
+            else{
+                start = mid + 1;
+            }
+            mid = start + (end - start)/2;
+        }
+         return letters[start%len];
+    }
+}
