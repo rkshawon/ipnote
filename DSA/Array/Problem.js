@@ -6,5 +6,6 @@ const problem = [
     34: "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
     852: "https://leetcode.com/problems/peak-index-in-a-mountain-array/",
     1095: "https://leetcode.com/problems/find-in-mountain-array/",
+    162: "https://leetcode.com/problems/find-peak-element/description/",
   },
 ];
