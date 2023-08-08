@@ -8,5 +8,6 @@ const problem = [
     1095: "https://leetcode.com/problems/find-in-mountain-array/",
     162: "https://leetcode.com/problems/find-peak-element/description/",
     410: "https://leetcode.com/problems/split-array-largest-sum/",
+    268: "https://leetcode.com/problems/missing-number/",
   },
 ];
