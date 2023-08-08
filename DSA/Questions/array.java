@@ -58,3 +58,23 @@ public class MyClass {
         return res;
     }
 }
+//Cyclic sort
+import java.util.Arrays;
+public class MyClass {
+    public static void main(String args[]) {
+        int[] arr = {5,1,3,4,6,7,8,2};
+        int i = 0;
+        
+        while(i<arr.length){
+            int index = arr[i]-1;
+            if(index == i ){
+                i++;
+            }else{
+                int temp = arr[i];
+                arr[i] = arr[index];
+                arr[index] = temp;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
