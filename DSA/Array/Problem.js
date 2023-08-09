@@ -9,5 +9,6 @@ const problem = [
     162: "https://leetcode.com/problems/find-peak-element/description/",
     410: "https://leetcode.com/problems/split-array-largest-sum/",
     268: "https://leetcode.com/problems/missing-number/",
+    448: "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/",
   },
 ];
