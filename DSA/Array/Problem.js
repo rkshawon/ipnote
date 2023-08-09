@@ -11,5 +11,6 @@ const problem = [
     268: "https://leetcode.com/problems/missing-number/",
     448: "https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/",
     287: "https://leetcode.com/problems/find-the-duplicate-number/",
+    442: "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
   },
 ];
