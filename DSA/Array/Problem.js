@@ -13,5 +13,6 @@ const problem = [
     287: "https://leetcode.com/problems/find-the-duplicate-number/",
     442: "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
     645: "https://leetcode.com/problems/set-mismatch/submissions/",
+    41: "https://leetcode.com/problems/first-missing-positive/submissions/",
   },
 ];
