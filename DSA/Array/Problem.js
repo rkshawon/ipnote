@@ -16,5 +16,6 @@ const problem = [
     41: "https://leetcode.com/problems/first-missing-positive/submissions/",
     832: "https://leetcode.com/problems/flipping-an-image/description/",
     215: "https://leetcode.com/problems/kth-largest-element-in-an-array/description/",
+    983: "https://leetcode.com/problems/minimum-cost-for-tickets/description/",
   },
 ];
