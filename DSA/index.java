@@ -40,3 +40,35 @@ class Solution {
         return triangle(values);
     }
 }
+
+//1402
+class Solution {
+    // public int solve(int[] arr, int index, int time, int[][] dp){
+    //     if(index >= arr.length){
+    //         return 0;
+    //     }
+    //     if(dp[index][time] != 0){
+    //         return dp[index][time];
+    //     }
+    //     int include = (arr[index]*(time+1)) + solve(arr, index+1, time+1, dp);
+    //     int exclude = solve(arr, index+1, time, dp);
+    //     dp[index][time] = Math.max(include, exclude);
+    //     return dp[index][time];
+    // }
+    public int solve(int[] arr){
+        int[][] dp = new int[arr.length+1][arr.length+1];
+        for(int index = arr.length-1; index>=0; index--){
+            for(int time=index; time>=0; time--){
+                int include = (arr[index]*(time+1)) + dp[index+1][time+1];
+                int exclude = dp[index+1][time];
+                dp[index][time] = Math.max(include, exclude);
+            }
+        }
+        return dp[0][0];
+    }
+
+    public int maxSatisfaction(int[] arr) {
+        Arrays.sort(arr);
+        return solve(arr);
+    }
+}

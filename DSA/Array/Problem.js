@@ -18,5 +18,6 @@ const problem = [
     215: "https://leetcode.com/problems/kth-largest-element-in-an-array/description/",
     983: "https://leetcode.com/problems/minimum-cost-for-tickets/description/",
     1039: "https://leetcode.com/problems/minimum-score-triangulation-of-polygon/description/",
+    1402: "https://leetcode.com/problems/reducing-dishes/description/",
   },
 ];
