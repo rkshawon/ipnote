@@ -17,5 +17,6 @@ const problem = [
     832: "https://leetcode.com/problems/flipping-an-image/description/",
     215: "https://leetcode.com/problems/kth-largest-element-in-an-array/description/",
     983: "https://leetcode.com/problems/minimum-cost-for-tickets/description/",
+    1039: "https://leetcode.com/problems/minimum-score-triangulation-of-polygon/description/",
   },
 ];
