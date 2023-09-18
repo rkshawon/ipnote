@@ -47,7 +47,7 @@ import java.util.*;
     prev.next = node.next;
     return head;
   }
-  
+  ///reverse list
   static Node reverseList(Node node){
     Node curr=node.next, prev=node, nxt=node.next;
     
