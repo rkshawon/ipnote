@@ -15,3 +15,8 @@ referece: https://www.youtube.com/watch?v=ZvbzSrg0afE
 
 const Global Space?
 *Anything that is not inside a function is call Global Space . 
+
+const V8 Engine?
+*V8 is responsible for executing JavaScript code. V8 takes that code and convert it into machine code so that the
+ CPU can understand and execute. Other than that it perfoms other important task like Performance Optimization,
+ Memory Management, Multithreading, Concurrency and Security.

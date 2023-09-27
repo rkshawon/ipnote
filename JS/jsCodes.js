@@ -1,3 +1,5 @@
+//polyfill
+
 Array.prototype.shawonFilter = function (fn) {
   const filteredArray = [];
   for (let i = 0; i < this.length; i++) {
