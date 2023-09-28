@@ -1,4 +1,6 @@
-Array.prototype.customFilter = function (fn) {
+//polyfill
+
+Array.prototype.shawonFilter = function (fn) {
   const filteredArray = [];
   for (let i of this) {
     if (fn(i)) {

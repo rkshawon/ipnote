@@ -1,15 +1,7 @@
-const b = document.querySelector("#id");
-const div = document.querySelector("#div");
-const frm = document.querySelector("#frm");
-
-frm.addEventListener("click", () => {
-  console.log("frm");
-});
-
-div.addEventListener("click", () => {
-  console.log("div");
-});
-
-b.addEventListener("click", () => {
-  console.log("button");
-});
+const promises = [
+  new Promise((resolve) => setTimeout(resolve, 200, "Ben Solo")),
+  new Promise((_, reject) => setTimeout(reject, 100, "Darth Vader")),
+];
+Promise.any(promises)
+  .then((characters) => console.log(characters))
+  .catch((characters) => console.error(characters));
