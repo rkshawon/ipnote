@@ -1,11 +1,12 @@
-Array.prototype.shawonFilter = function (fn) {
+Array.prototype.customFilter = function (fn) {
   const filteredArray = [];
-  for (let i = 0; i < this.length; i++) {
-    if (fn(this[i])) {
-      filteredArray.push(this[i]);
+  for (let i of this) {
+    if (fn(i)) {
+      filteredArray.push(i);
     }
   }
   return filteredArray;
 };
-const arr = [2, 4, 5, 6, 8];
-console.log(arr.shawonFilter((item) => item > 3));
+
+const arr = [2, 4, 5, 6, 8].customFilter((item) => item > 3);
+console.log(arr);
