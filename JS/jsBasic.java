@@ -6,6 +6,9 @@ const JavaScript?
 it is a high-level, dynamically-typed scripting language that
 enables web developers to create interactive and dynamic content on websites.
 
+**JavaScript is an object-based language. Everything is an object in JavaScript.
+**JavaScript is template based not class based. Here, we don't create class to get the object. But, we direct create objects.
+
 *JavaScript is known for its flexibility, as it can be used for a wide range of tasks beyond web development,
 including server-side scripting (Node.js), desktop application development, and even
 IoT (Internet of Things) programming. It plays a crucial role in modern web development,
