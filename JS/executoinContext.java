@@ -1,3 +1,8 @@
+V8 Engine?
+link: "https://www.youtube.com/watch?v=q3Wsoa7wfDg&t=5s"
+
+
+
 const Execution_Context ?
 *When the JavaScript engine scans a script file,
 it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
