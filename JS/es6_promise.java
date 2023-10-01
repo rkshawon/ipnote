@@ -1,9 +1,17 @@
 const event?
-    when an HTML element experiences a change in its state due to an activity performed by a user or the browser is known as event.
+    when an HTML element experiences a change in its state due to an activity performed by a user or
+    the browser is known as event.
 
-const Debouncing and Throttling? 
-    Debouncing is like waiting for a user to finish typing before performing a search. If the user types quickly, it will delay the search until they pause.
-    Throttling is like accepting a maximum of one request every 5 seconds, regardless of how many times a button is clicked. It enforces a regular, controlled rate of execution.
+const Debouncing and Throttling?
+    *Debouncing is a technique that ensures a function is not executed until a certain amount of time has passed
+    since the last time the function was invoked. 
+    *Debouncing is like waiting for a user to finish typing before performing a search.
+    if the user types quickly, it will delay the search until they pause.
+
+    *Throttling is a technique that limits the rate at which a function is executed
+    by allowing it to run at most once within a specified time interval.
+    *Throttling is like accepting a maximum of one request every 5 seconds,
+    regardless of how many times a button is clicked.
 
 const Promise?
     A Promise is a special object which is used to handle asynchronous operations in JavaScript.

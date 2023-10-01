@@ -1,8 +1,8 @@
 const new Keyword?
-New keyword does three things while creating an object using function contructor.
+while creating an object using Function Ccontructor new keyword does three things .
 *First create and empty { } object on function contructor.
-*It also make sure that the this keyword in function contructor point to the newly created empty object.
-*Finaly it returns the object from function contructor
+*It also make sure that the this keyword in Function Ccontructor point to the newly created empty object.
+*Finaly it returns the object from Function Ccontructor
 
 Example:
 const jhon = new Person();
