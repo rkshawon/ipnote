@@ -1,13 +1,15 @@
 link: "https://www.mygreatlearning.com/blog/javascript-interview-questions/"
 link: "https://www.guru99.com/javascript-interview-questions-answers.html"
 
+job application line: "https://bluethrone.io/careers"
+
 const JavaScript?
 *JavaScript is a programming language that is used for web development.
 it is a high-level, dynamically-typed synchonous single Threaded language that
 enables web developers to create interactive and dynamic content on websites.
 
 **JavaScript is an object-based language. Everything is an object in JavaScript.
-**JavaScript is template based not class based. Here, we don't create class to get the object. But, we direct create objects.
+**JavaScript is template based not class. Here we dont create classes to get the object. But we can direct create objects.
 
 *JavaScript is known for its flexibility, as it can be used for a wide range of tasks beyond web development,
 including server-side scripting (Node.js), desktop application development, and even
@@ -38,3 +40,41 @@ This process is typically done in real-time, without producing a separate compil
 
 Dynamic Compilation: Instead of compiling the entire program ahead of time,
 JIT compiler translates the program into machine code on-the-fly, just before execution. This dynamic compilation happens at runtime.
+
+
+let value = null;
+let def = 0;
+const res = value || def;
+console.log(res);
+
+const || vs && vs ??
+(||)If both true || returns first value. but if both side is false then || return last one and && returns first one.if either is false then true one is returned.
+(&&)If both true && returns last value. but if both side is false then && return first value.if either is false then false one is returned.
+(??)If both true ?? returns first value. but if both side is false then ?? return last value.if either is false then true one is returned.
+
+*?? is a logical operator which is similar to ||(OR) but with little difference.
+*In case of ?? true and false indicates only null and undefined . other falsy value like 0,"" is not considered true.
+
+const String padding?
+String padding in JavaScript refers to adding characters to the beginning or end of a string to make it a specific length.
+
+const originalString = '42';
+const paddedString = originalString.padEnd(5, '*');
+console.log(paddedString); // Outputs: '42***'
+//ref collection file for more details
+
+const Module ?
+Module is a file that contains code to perform a specific task . A Module may contain variables, functions, classes etc.
+Ref link: "https://www.programiz.com/javascript/modules"
+
+const Number?
+Ref link: "https://www.programiz.com/javascript/numbers"
+
+const Math? 
+Ref Link: "https://www.programiz.com/javascript/library/math/random"
+
+const Array Method?
+Ref link: "https://www.programiz.com/javascript/library/array/length"
+
+const String Method?
+Ref link: "https://www.programiz.com/javascript/library/string/length"
