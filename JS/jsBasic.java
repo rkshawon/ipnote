@@ -3,7 +3,7 @@ link: "https://www.guru99.com/javascript-interview-questions-answers.html"
 
 const JavaScript?
 *JavaScript is a programming language that is used for web development.
-it is a high-level, dynamically-typed scripting language that
+it is a high-level, dynamically-typed synchonous single Threaded language that
 enables web developers to create interactive and dynamic content on websites.
 
 **JavaScript is an object-based language. Everything is an object in JavaScript.

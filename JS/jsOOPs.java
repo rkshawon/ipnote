@@ -7,11 +7,20 @@ const Class?
     *The class is executed in strict mode
     *Class declaration is not a part of JavaScript hoisting. So, it is required to declare the class before invoking it.
 
-const new Keyword?
+const New Keyword?
+New keyword in JavaScript is used to create an instance of an object that has a constructor function
 while creating an object using Function Ccontructor new keyword does three things .
-*First create and empty { } object on function contructor.
+*First create an empty { } object on function contructor.
+*The new object’s internal ‘Prototype’ property (__proto__) is set the same as the prototype of the constructing function.
 *It also make sure that the this keyword in Function Ccontructor point to the newly created empty object.
+    It binds the property which is declared with ‘this’ keyword to the new object.
 *Finaly it returns the object from Function Ccontructor
+
+*About the returned value, there are three situations below. 
+If the constructor function returns a non-primitive value (Object, array, etc), the constructor function still returns that value.
+Which means the new operator won’t change the returned value.
+If the constructor function returns nothing, ‘this’ is return;
+If the constructor function returns a primitive value,  it will be ignored, and ‘this’ is returned.
 
 Example:
 const jhon = new Person();
@@ -29,6 +38,7 @@ Prototypes are important because they enable code reuse and allow objects to sha
 They help create a more efficient and memory-conscious way of handling objects and their methods
 
 Every function in JavaScript has a prototype property.
+ JavaScript engine adds a prototype property inside a function, 
 //When we create objects, these objects inherit properties and methods from the constructors prototype via the prototype chain.
 
 Object.prototype sits at the top of the prototype chain and provides basic methods and properties that are inherited by all objects.
@@ -40,6 +50,32 @@ whether built-in or custom, have common methods like toString(), valueOf(),
 proto (often called "dunder proto" or "magic proto") is a property that exists on all JavaScript objects.
 It is a reference to the prototype object of the constructor that was used to create the object.
 It is part of the internal mechanism for object inheritance and provides a way to access the prototype of an object.
+
+Functions prototype property can be accessed using <function-name>.prototype. However,
+an object (instance) does not expose prototype property, instead you can access it using __proto__.
+
+console.log(Student.prototype); // object
+console.log(studObj.prototype); // undefined
+console.log(studObj.__proto__); // object
+
+Prototype property is basically an object (also known as Prototype object),
+ where we can attach methods and properties in a prototype object, which enables all the other objects to inherit these methods and properties.
+
+"JavaScript engine adds a prototype property inside a function":
+In JavaScript, every function has a built-in property called prototype. This property is automatically created for every function,
+and it's used to establish the prototype chain.
+
+"Prototype property is basically an object (also known as Prototype object)":
+The prototype property of a function is indeed an object. It's often referred to as the "prototype object" or "prototype" for short.
+
+"We can attach methods and properties in a prototype object":
+You can add methods and properties to the prototype object of a function. These methods and properties become shared among all
+instances (objects) created from that function's constructor. This allows you to define common behavior that multiple objects should inherit.
+
+"Enables all the other objects to inherit these methods and properties":
+When you create objects using a constructor function (using the new keyword), those objects inherit the methods and properties from the constructor
+function's prototype. This inheritance forms the prototype chain, which is a mechanism for object inheritance in JavaScript.
+This means that objects created from the same constructor function share a common set of methods and properties via their prototype chain.
 
 // proto should generally be used for informational or debugging purposes, and you should avoid modifying it directly; instead,
 // you should use the "prototype" property of constructor functions or classes to define the inheritance structure for objects.
