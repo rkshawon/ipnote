@@ -3,9 +3,11 @@ Link: "https://www.javatpoint.com/javascript-oops-classes"
 
 
 const Class?
-    *Class are the special type of functions.We can define the class just like function declarations and function expressions.
+    *Class are the special type of functions.We can define the class just like function declarations
+    and function expressions.
     *The class is executed in strict mode
-    *Class declaration is not a part of JavaScript hoisting. So, it is required to declare the class before invoking it.
+    *Class declaration is not a part of JavaScript hoisting. So, it is required to declare the 
+    class before invoking it.
 
 const new Keyword?
 while creating an object using Function Ccontructor new keyword does three things .
@@ -31,7 +33,8 @@ They help create a more efficient and memory-conscious way of handling objects a
 Every function in JavaScript has a prototype property.
 //When we create objects, these objects inherit properties and methods from the constructors prototype via the prototype chain.
 
-Object.prototype sits at the top of the prototype chain and provides basic methods and properties that are inherited by all objects.
+Object.prototype sits at the top of the prototype chain and provides basic methods and properties that are
+inherited by all objects.
 
 All objects in JavaScript directly or indirectly inherited from Object.prototype. This means that all objects,
 whether built-in or custom, have common methods like toString(), valueOf(),
@@ -44,7 +47,8 @@ It is part of the internal mechanism for object inheritance and provides a way t
 // proto should generally be used for informational or debugging purposes, and you should avoid modifying it directly; instead,
 // you should use the "prototype" property of constructor functions or classes to define the inheritance structure for objects.
 
-Prototype Chain in JavaScript is a hierarchical structure of object prototypes, enabling inheritance of properties and methods among objects
+Prototype Chain in JavaScript is a hierarchical structure of object prototypes, enabling
+inheritance of properties and methods among objects
 
 const Contructor Function?
     * Contructor function is a function in javascript which is used to create several objects.
