@@ -41,6 +41,36 @@ const V8 Engine?
  CPU can understand and execute. Other than that it perfoms other important task like Performance Optimization,
  Memory Management, Multithreading, Concurrency and Security.
 
+ const How V8 Engine works?
+ link: "https://www.geeksforgeeks.org/how-v8-compiles-javascript-code/"
+
+    *Parsing Phase: During the parsing phase, the code is broken down into its tokens.
+        const sum = 5 + 7.Here const is a token, sum is a token, 5 is a token, ‘+’ is a token, and 7 is a token.
+        After the code is broken down into tokens, it is given to the syntax parser which converts the code into an Abstract Syntax Tree (AST).
+        It is easier to convert into mahcine code when we have code in Tree data structure thats why parser creates AST.
+
+    *Compilation phase: Compilation is the process of converting human-readable code to machine code.
+        V8 engine uses both a compiler and an interpreter and follows Just in Time(JIT) Compilation for improved performance.
+        The code is converted into IR(Intermediate Representation) version of the code which id byte code. Reason for doing this is
+        to make to Byte code is universal means not hardware dependent so it can run on any device.
+
+        The V8 engine uses the Ignition interpreter, which takes in the Abstract Syntax Tree as the input and gives the byte code as the output,
+        which further proceeds to the execution phase. When the code is being interpreted,
+        the compiler tries to talk with the interpreter to optimize the code. The V8 engine uses the Turbofan compiler,
+        which takes the byte code from the interpreter as
+        the input and gives the optimized machine code as the output.
+
+    *Execution Phase: The byte code is executed by using the Memory heap and the Call Stack of the V8 engine’s runtime environment.
+        Memory Heap is the place where all the variables and functions are assigned memory. Call Stack is the place where each individual functions,
+        when called are pushed to the stack, and popped out after their execution.
+
+    * Inline Cache: Inline Cache is a data structure used to keep track of the addresses of the properties on objects,
+        thereby reducing the lookup time. It tracks all the LOAD, STORE, and CALL events within a function, by maintaining a Feedback Vector.
+        Feedback Vector is simply an array used to track all the Inline Caches of a particular function.
+
+    *Garbage Collection: The V8 engine is provided with the Orinoco Garbage Collector which internally uses the Mark and Sweep Algorithm
+        to free up space from the memory heap.
+
 const Lexical environment?
 A Lexical environment in JavaScript is an internal data structure that keeps track of variables,
 values, and their scope within a specific part of code.
