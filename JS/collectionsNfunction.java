@@ -15,3 +15,23 @@ WeakMap:
     A collection of key-value pairs where keys are objects only.
     Keys in a WeakMap can be garbage collected if no longer referenced elsewhere.
     Lacks size and iteration methods.
+
+const Objects.values()
+
+    const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 25
+    };
+
+    const profile = Object.values(person);
+
+    console.log(profile);
+    Code language: JavaScript (javascript)
+    Output:
+
+   Output: [ 'John', 'Doe', 25 ]
+   Technically, if you use the for...in loop with the Object.hasOwnProperty() method, you will get the same set of values as the Object.values().
+   
+const Object.is()
+   link: 'https://www.javascripttutorial.net/es6/javascript-object-is/'
