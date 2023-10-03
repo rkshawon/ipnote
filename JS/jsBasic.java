@@ -47,12 +47,12 @@ let def = 0;
 const res = value || def;
 console.log(res);
 
-const || vs && vs ??
+const || vs && vs ??(nullish coalescing operator)
 (||)If both true || returns first value. but if both side is false then || return last one and && returns first one.if either is false then true one is returned.
 (&&)If both true && returns last value. but if both side is false then && return first value.if either is false then false one is returned.
 (??)If both true ?? returns first value. but if both side is false then ?? return last value.if either is false then true one is returned.
 
-*?? is a logical operator which is similar to ||(OR) but with little difference.
+*??(nullish coalescing operator) is a logical operator which is similar to ||(OR) but with little difference.
 *In case of ?? true and false indicates only null and undefined . other falsy value like 0,"" is not considered true.
 
 const String padding?
