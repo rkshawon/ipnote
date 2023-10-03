@@ -38,9 +38,10 @@ const Exponential operator?
     Example:const result = 2 ** 3 ** 2; // Equivalent to 2 ** (3 ** 2) = 2^9 = 512
     Another way is Math.pow(2,3) and 2<<2(n-1, means 3-1= 2)
      *Started from ES7(2016)
+
 const Optional chaining?
     *The optional chaining operator (?.) allows you to access nested properties or calling methods on objects without explicitly checking
     if each reference in the chain is null or undefined.
     *If one of the references in the chain is null or undefined, the optional chaining operator (?.) will short circuit and return undefined.
-    *It simplifies the process of accessing  when the intermediate properties might be undefined or null
+    *It simplifies the process of accessing when the intermediate properties might be undefined or null
     *Started from ES11(2020)
