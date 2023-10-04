@@ -41,3 +41,17 @@ const FlatMap()?
 
 const Generator?
     link: 'https://www.programiz.com/javascript/generators'
+
+const Number?
+    link: "https://www.programiz.com/javascript/numbers"
+
+const Math? 
+    Link: "https://www.programiz.com/javascript/library/math/random"
+
+const Array Method?
+    link: "https://www.programiz.com/javascript/library/array/length"
+
+const String Method?
+    link: "https://www.programiz.com/javascript/library/string/length"
+
+

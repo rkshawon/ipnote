@@ -84,16 +84,3 @@ Ref link: "https://www.programiz.com/javascript/modules"
 const scripting language?
     *A scripting language is a type of programming language that is interpreted and executed at runtime.
     It is often used for automating tasks, controlling software applications, and enabling interactions between different software components.
-
-const Number?
-Ref link: "https://www.programiz.com/javascript/numbers"
-
-const Math? 
-Ref Link: "https://www.programiz.com/javascript/library/math/random"
-
-const Array Method?
-Ref link: "https://www.programiz.com/javascript/library/array/length"
-
-const String Method?
-Ref link: "https://www.programiz.com/javascript/library/string/length"
-
