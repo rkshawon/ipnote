@@ -35,3 +35,9 @@ const Objects.values()
    
 const Object.is()
    link: 'https://www.javascripttutorial.net/es6/javascript-object-is/'
+
+const FlatMap()?
+    link: "https://www.youtube.com/watch?v=y-Bfgellcog&t=15s"
+
+const Generator?
+    link: 'https://www.programiz.com/javascript/generators'

@@ -81,6 +81,10 @@ const Module ?
 Module is a file that contains code to perform a specific task . A Module may contain variables, functions, classes etc.
 Ref link: "https://www.programiz.com/javascript/modules"
 
+const scripting language?
+    *A scripting language is a type of programming language that is interpreted and executed at runtime.
+    It is often used for automating tasks, controlling software applications, and enabling interactions between different software components.
+
 const Number?
 Ref link: "https://www.programiz.com/javascript/numbers"
 
