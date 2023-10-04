@@ -23,23 +23,29 @@ var a = b;
 
 
 const Compiler vs Interpreter?
-    *Compiler: A compiler translates code from a high-level programming language (like Python, JavaScript or Go) into machine code before the program runs.
-    *Interpreter: An interpreter translates code written in a high-level programming language into machine code line-by-line as the code runs.
+    *Compiler: A compiler translates code from a high-level programming language (like Python, JavaScript or Go)
+        into machine code before the program runs.
+    *Interpreter: An interpreter translates code written in a high-level programming language into machine
+        code line-by-line as the code runs.
     *Just-in-time compilation (JIT): In JIT the intermediate representation is compiled to native machine code at runtime.
 
-*The first JavaScript engines were simple interpreters, but all modern engines use just-in-time (JIT) compilation for performance reasons.
+*The first JavaScript engines were simple interpreters, but all modern engines use (JIT) compilation for performance reasons.
 
-*A compiler takes in the entire program and requires a lot of time to analyze the source code. Whereas the interpreter takes a single line of code and very little time to analyze it.
+*A compiler takes in the entire program and requires a lot of time to analyze the source code.
+    Whereas the interpreter takes a single line of code and very little time to analyze it.
 *Compiled code runs faster, while interpreted code runs slower.
-*A compiler displays all errors after compilation. If your code has mistakes, it will not compile. But the interpreter displays errors of each line one by one.
+*A compiler displays all errors after compilation. If your code has mistakes, it will not compile.
+    But the interpreter displays errors of each line one by one.
 *Interpretation does not replace compilation completely.
 *Compilers can contain interpreters for optimization reasons like faster performance and smaller memory footprint.
 
-*In the case of an interpreter, it directly converts the source code into machine code or bytecode as it executes the code line by line or statement by statement.
-This process is typically done in real-time, without producing a separate compiled executable.
+*In the case of an interpreter, it directly converts the source code into machine code or bytecode as it executes
+    the code line by line or statement by statement.This process is typically done in real-time,
+    without producing a separate compiled executable.
 
 Dynamic Compilation: Instead of compiling the entire program ahead of time,
-JIT compiler translates the program into machine code on-the-fly, just before execution. This dynamic compilation happens at runtime.
+JIT compiler translates the program into machine code on-the-fly, just before execution.
+    This dynamic compilation happens at runtime.
 
 
 let value = null;
@@ -48,7 +54,7 @@ const res = value || def;
 console.log(res);
 
 const || vs && vs ??(nullish coalescing operator)
-(||)If both true || returns first value. but if both side is false then || return last one and && returns first one.if either is false then true one is returned.
+(||)If both true || returns first value. but if both side is false then || return last one. if either is false then true one is returned.
 (&&)If both true && returns last value. but if both side is false then && return first value.if either is false then false one is returned.
 (??)If both true ?? returns first value. but if both side is false then ?? return last value.if either is false then true one is returned.
 
@@ -73,7 +79,8 @@ const  Issues with dynamically typed languages?
     *Debugging Complexity: Debugging can be more challenging in dynamically typed languages because type-related issues may only surface during runtime.
 
 const NPM?
-    *A Package manager is a tool developers use to automate finding, downloading, installing, configuring, upgrading, and removing a systems packages.
+    *A Package manager is a tool developers use to automate finding, downloading, installing, configuring, upgrading
+     and removing a systems packages.
     *NPM (Node Package Manager) and Yarn (Yet Another Resource Negotiator) are two popularly used Package managers.
     *A Package registry is a database (storage) for thousands of packages.
 

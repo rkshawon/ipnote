@@ -6,7 +6,7 @@ link: "https://www.youtube.com/watch?v=q3Wsoa7wfDg&t=5s"
 const Execution_Context ?
 *When the JavaScript engine scans a script file,
 it makes an environment called the Execution Context that handles the entire transformation and execution of the code.
-During the context runtime, the parser parses the source code and allocates memory for the variables and functions.
+// During the context runtime, the parser parses the source code and allocates memory for the variables and functions.
 
 Execution_Context is created in two two phase : Creation Phase and Code execution phase
 
@@ -60,8 +60,7 @@ const V8 Engine?
         which takes the byte code from the interpreter as
         the input and gives the optimized machine code as the output.
 
-    *Execution Phase: The byte code is executed by using the Memory heap and the Call Stack of the V8 engine’s runtime environment.
-        Memory Heap is the place where all the variables and functions are assigned memory. Call Stack is the place where each individual functions,
+    *Memory Heap is the place where all the variables and functions are assigned memory. Call Stack is the place where each individual functions,
         when called are pushed to the stack, and popped out after their execution.
 
     * Inline Cache: Inline Cache is a data structure used to keep track of the addresses of the properties on objects,
