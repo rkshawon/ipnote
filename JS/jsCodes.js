@@ -119,3 +119,58 @@ console.log(shan.getName());
 
 //for OBject.create inheritence use this:
 link: "https://www.youtube.com/watch?v=F-dd2FYnYzg&list=PL1BztTYDF-QOvKYBBYdjzHISCeaYCAEfH&index=11";
+
+// FlatMaP Example:
+const num = [1, 2];
+const strs = ["one", "two"];
+let res = num.map((n, i) => {
+  return [n, strs[i]];
+});
+res = res.flat(5);
+
+res = num.flatMap((n, i) => {
+  return [n, strs[i]];
+});
+console.log(res);
+
+//Generator
+function* generatorFunc(val) {
+  let x = val;
+  yield x;
+}
+
+const generator = generatorFunc(2);
+
+console.log(generator.next());
+console.log(generator.next());
+
+//private field and method in js with #
+class MyClass {
+  #privateField = 10; // Private field
+
+  constructor() {
+    this.publicField = 20; // Public field
+  }
+
+  #privateMethod() {
+    return "Private method";
+  }
+
+  publicMethod() {
+    return "Public method";
+  }
+
+  accessPrivateField() {
+    return this.#privateField;
+  }
+
+  accessPrivateMethod() {
+    return this.#privateMethod();
+  }
+}
+
+const instance = new MyClass();
+console.log(instance.publicField); // Accessible
+//   console.log(instance.#privateField); // Error (private)
+console.log(instance.publicMethod()); // Accessible
+//   console.log(instance.#privateMethod()); // Error (private)

@@ -55,6 +55,7 @@ const Trailling comma ?
     *Started from ES5(2015)
     Example with function:
     function greet(name, age, ) {}
+    not Valid : function nam(,) {} // on empty paranthesis
 
 const Exponential operator?
     * It is represented by the double asterisk (**) symbol. it is used to find the power of any number.
