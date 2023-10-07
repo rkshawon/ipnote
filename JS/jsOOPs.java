@@ -62,22 +62,23 @@ console.log(studObj.prototype); // undefined
 console.log(studObj.__proto__); // object
 
 Prototype property is basically an object (also known as Prototype object),
- where we can attach methods and properties in a prototype object, which enables all the other objects to inherit these methods and properties.
+ where we can attach methods and properties in a prototype object, which enables all the other
+ objects to inherit these methods and properties.
 
 "JavaScript engine adds a prototype property inside a function":
 In JavaScript, every function has a built-in property called prototype. This property is automatically created for every function,
-and it's used to establish the prototype chain.
+and its used to establish the prototype chain.
 
 "Prototype property is basically an object (also known as Prototype object)":
-The prototype property of a function is indeed an object. It's often referred to as the "prototype object" or "prototype" for short.
+The prototype property of a function is indeed an object. Its often referred to as the "prototype object" or "prototype" for short.
 
 "We can attach methods and properties in a prototype object":
 You can add methods and properties to the prototype object of a function. These methods and properties become shared among all
-instances (objects) created from that function's constructor. This allows you to define common behavior that multiple objects should inherit.
+instances (objects) created from that functions constructor. This allows you to define common behavior that multiple objects should inherit.
 
 "Enables all the other objects to inherit these methods and properties":
 When you create objects using a constructor function (using the new keyword), those objects inherit the methods and properties from the constructor
-function's prototype. This inheritance forms the prototype chain, which is a mechanism for object inheritance in JavaScript.
+functions prototype. This inheritance forms the prototype chain, which is a mechanism for object inheritance in JavaScript.
 This means that objects created from the same constructor function share a common set of methods and properties via their prototype chain.
 
 // proto should generally be used for informational or debugging purposes, and you should avoid modifying it directly; instead,
