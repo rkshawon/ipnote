@@ -115,3 +115,17 @@ class Solution {
         return result;
     }
 }
+//https://leetcode.com/problems/invert-binary-tree/
+class Solution {
+    public TreeNode invert(TreeNode node){
+        if(node == null) return node;
+        TreeNode right = invert(node.left);
+        TreeNode left = invert(node.right);
+        node.right = right;
+        node.left = left;
+        return node;
+    }
+    public TreeNode invertTree(TreeNode root) {
+        return invert(root);
+    }
+}
