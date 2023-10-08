@@ -78,3 +78,40 @@ class Solution {
         return (level(root, xx, 0) == level(root, yy, 0) && !isShibling(root, xx, yy))? true :false;
     }
 }
+
+//https://leetcode.com/problems/symmetric-tree/description/
+
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        return isMirror(root.left, root.right);
+    }
+    private boolean isMirror(TreeNode node1, TreeNode node2) {
+        if (node1 == null && node2 == null) {
+            return true;
+        }
+        if (node1 == null || node2 == null) {
+            return false;
+        }
+        return node1.val == node2.val && isMirror(node1.left, node2.right) && isMirror(node1.right, node2.left);
+    }
+}
+//https://leetcode.com/problems/diameter-of-binary-tree/
+class Solution {
+    int result = 0;
+    public int sum(TreeNode node){
+        if(node == null){
+            return 0;
+        }
+        int left = sum(node.left);
+        int right = sum(node.right);
+        result = Math.max(left + right, result);
+        return Math.max(left, right) + 1;
+    }
+    public int diameterOfBinaryTree(TreeNode root) {
+        sum(root);
+        return result;
+    }
+}
