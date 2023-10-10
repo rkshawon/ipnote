@@ -43,3 +43,23 @@ class Solution {
         return findAncestor(root, p, q);
     }
 }
+
+//https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+class Solution {
+    int count = 0;
+    public TreeNode getSmallValue(TreeNode root, int k) {
+        if(root == null) return null;
+        TreeNode left  = getSmallValue(root.left, k);
+        if(left != null){
+            return left;
+        }
+        count++;
+        if(count == k){
+            return root;
+        }
+        return getSmallValue(root.right, k);
+    }
+    public int kthSmallest(TreeNode root, int k) {
+        return getSmallValue(root, k).val;
+    }
+}
