@@ -28,3 +28,18 @@ public class Solution {
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 }
+//https://www.youtube.com/watch?v=EiScA8DlzLA&list=RDvsN1aImsEAY&index=26
+class Solution {
+    public TreeNode findAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == p || root == q) return root;
+        TreeNode left = findAncestor(root.left, p, q);
+        TreeNode right = findAncestor(root.right, p, q);
+        if(left !=null && right != null) return root;
+        if(left !=null) return left;
+        if(right !=null) return right;
+        return null;
+    }
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        return findAncestor(root, p, q);
+    }
+}
