@@ -86,5 +86,3 @@ than data reliability, such as online gaming, VoIP, streaming media, and DNS (Do
 - Data: Data streams
 - Protocols: HTTP, FTP, SMTP, POP3, IMAP, etc.
 - Devices: Computers, servers, application-specific hardware.
-
-This breakdown includes the terminology used at each layer, such as frames, packets, and segments, as well as the specific protocols and devices associated with each layer.
