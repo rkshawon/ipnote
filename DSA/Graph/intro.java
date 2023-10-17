@@ -23,6 +23,7 @@ class HelloWorld {
 
 //adjacent list
 //other same as above 
+// for weigth edges add {} or [] instead of number in ArrayList
 import java.util.*;
 
 public class MyClass {
