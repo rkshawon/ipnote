@@ -1,3 +1,19 @@
+//Matrix to Adjacent list 
+class Solution {
+    public int findCircleNum(int[][] isConnected) {
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        
+        for (int i = 0; i < matrix.length; i++) {
+            adj.add(new ArrayList<>());
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] == 1) {
+                    adj.get(i).add(j);
+                }
+            }
+        }
+    }
+}
+
 //adjacent matrix
 class HelloWorld {
     public static void main(String[] args) {
@@ -55,3 +71,4 @@ public class MyClass {
         }
     }
 }
+
