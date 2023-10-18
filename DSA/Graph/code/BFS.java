@@ -24,3 +24,45 @@ class Solution {
         return res;
     }
 }
+//detect Cycle in undirected graph
+//ther is a Pair class in java but not working right now for me.
+class Pair{
+    int first;
+    int second;
+    Pair(int f, int s){
+        this.first = f;
+        this.second = s;
+    }
+}
+class Solution {
+    public boolean checkCycle(int src, ArrayList<ArrayList<Integer>> adj, boolean[] visited){
+        Queue<Pair> q = new LinkedList<>();
+        q.add(new Pair(src, -1));
+        visited[src] = true;
+        while(!q.isEmpty()){
+            int node = q.peek().first;
+            int parent = q.peek().second;
+            q.remove();
+            for(int adjNode: adj.get(node)){
+                if(!visited[adjNode]){
+                    q.add(new Pair(adjNode, node));
+                    visited[adjNode] = true;
+                    
+                }else if(parent != adjNode){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    // Function to detect cycle in an undirected graph.
+    public boolean isCycle(int v, ArrayList<ArrayList<Integer>> adj) {
+        boolean[] visited = new boolean[v+1];
+        for(int i=0; i<v; i++){
+            if(!visited[i]){
+                if(checkCycle(i, adj, visited)) return true;
+            }
+        }
+        return false;
+    }
+}
