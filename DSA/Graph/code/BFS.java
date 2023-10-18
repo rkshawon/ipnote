@@ -24,7 +24,8 @@ class Solution {
         return res;
     }
 }
-//detect Cycle in undirected graph
+//detect Cycle in undirected graph using BFS
+// in line 52 means if visited why are u not my parent only my parent is allow visited in my list.
 //ther is a Pair class in java but not working right now for me.
 class Pair{
     int first;
@@ -61,6 +62,33 @@ class Solution {
         for(int i=0; i<v; i++){
             if(!visited[i]){
                 if(checkCycle(i, adj, visited)) return true;
+            }
+        }
+        return false;
+    }
+}
+
+//detect Cycle in undirected graph using DFS
+class Solution {
+    public boolean checkCycle(int node, int parent, ArrayList<ArrayList<Integer>> adj, boolean[] visited){
+        visited[node] = true;
+        for(int adjNode: adj.get(node)){
+            if(!visited[adjNode]){
+                if(checkCycle(adjNode, node, adj, visited)){
+                    return true;
+                }
+            }else if(parent != adjNode){
+                return true;
+            }
+        }
+        return false;
+    }
+    // Function to detect cycle in an undirected graph.
+    public boolean isCycle(int v, ArrayList<ArrayList<Integer>> adj) {
+        boolean[] visited = new boolean[v+1];
+        for(int i=0; i<v; i++){
+            if(!visited[i]){
+                if(checkCycle(i, -1, adj, visited)) return true;
             }
         }
         return false;
