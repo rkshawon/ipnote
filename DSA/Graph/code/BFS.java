@@ -94,3 +94,46 @@ class Solution {
         return false;
     }
 }
+
+
+
+
+
+//Bipartite Graph
+class Solution
+{
+    public boolean bfs(int val, ArrayList<ArrayList<Integer>>adj, int[] color){
+        color[val] = 1;
+        Queue<Integer> q = new LinkedList<>();
+        q.add(val);
+        while(!q.isEmpty()){
+            int num = q.poll();
+            for(int n:adj.get(num)){
+                if(color[n] == 0){
+                    if(color[num] == 1)
+                        color[n] = -1;
+                    else
+                        color[n] = 1;
+                    q.add(n);
+                }
+                if(color[n] == color[num]){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public boolean isBipartite(int V, ArrayList<ArrayList<Integer>>adj)
+    {
+        int[] color = new int[V];
+        
+        for(int i = 0; i<V; i++){
+            if(color[i] == 0){
+                if(!bfs(i, adj, color)){
+                    return false; 
+                }
+            }
+        }
+        return true;
+    }
+}
