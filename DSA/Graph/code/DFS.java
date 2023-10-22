@@ -37,7 +37,7 @@ class Solution {
         path[v] = 0;
         return false;
     }
-    // Function to detect cycle in a directed graph.
+
     public boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
        int[] visited = new int[v];
        int[] path = new int[v];
@@ -81,5 +81,35 @@ class Solution
             }
         }
         return true;
+    }
+}
+
+//Topological sort
+class Solution
+{
+     static void dfs(int v, Stack<Integer> stack, int[] visited, ArrayList<ArrayList<Integer>> adj){
+         visited[v] = 1;
+         for(int i : adj.get(v)){
+            if(visited[i]==0){
+                dfs(i, stack, visited, adj);
+            }
+         }
+         stack.push(v);
+     }
+ 
+    static int[] topoSort(int v, ArrayList<ArrayList<Integer>> adj) 
+    {
+        int[] visited = new int[v];
+        Stack<Integer> stack = new Stack();
+        for(int i =0 ; i<v; i++){
+            if(visited[i]==0){
+                dfs(i, stack, visited, adj);
+            }
+        }
+        int[] res = new int[v];
+        for(int i =0; i<v; i++){
+            res[i] = stack.pop();
+        }
+        return res;
     }
 }
