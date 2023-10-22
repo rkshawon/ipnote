@@ -2,7 +2,7 @@
 //adj given already
 link: https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=bfs_of_graph
 class Solution {
-    // Function to return Breadth First Traversal of given graph.
+
     public ArrayList<Integer> bfsOfGraph(int v, ArrayList<ArrayList<Integer>> adj) {
         Queue<Integer> q = new LinkedList<>();
         boolean[] visited = new boolean[v+1];
@@ -56,7 +56,7 @@ class Solution {
         }
         return false;
     }
-    // Function to detect cycle in an undirected graph.
+  
     public boolean isCycle(int v, ArrayList<ArrayList<Integer>> adj) {
         boolean[] visited = new boolean[v+1];
         for(int i=0; i<v; i++){
@@ -83,7 +83,7 @@ class Solution {
         }
         return false;
     }
-    // Function to detect cycle in an undirected graph.
+
     public boolean isCycle(int v, ArrayList<ArrayList<Integer>> adj) {
         boolean[] visited = new boolean[v+1];
         for(int i=0; i<v; i++){
@@ -107,7 +107,7 @@ class Solution
         Queue<Integer> q = new LinkedList<>();
         q.add(val);
         while(!q.isEmpty()){
-            int num = q.poll();
+            int num = q.pol l();
             for(int n:adj.get(num)){
                 if(color[n] == 0){
                     if(color[num] == 1)
@@ -135,5 +135,45 @@ class Solution
             }
         }
         return true;
+    }
+}
+
+
+//Kahn's Algorithm | Topological Sort Algorithm
+class Solution {
+    static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {
+        int indegree[] = new int[V];
+        for (int i = 0; i < V; i++) {
+            for (int it : adj.get(i)) {
+                indegree[it]++;
+            }
+        }
+
+        Queue<Integer> q = new LinkedList<Integer>();
+        
+        for (int i = 0; i < V; i++) {
+            if (indegree[i] == 0) {
+                q.add(i);
+            }
+        }
+
+        int topo[] = new int[V];
+        int i = 0;
+        while (!q.isEmpty()) {
+            int node = q.peek();
+            q.remove();
+            topo[i++] = node;
+            // node is in your topo sort
+            // so please remove it from the indegree
+
+            for (int it : adj.get(node)) {
+                indegree[it]--;
+                if (indegree[it] == 0) {
+                    q.add(it);
+                }
+            }
+        }
+
+        return topo;
     }
 }
