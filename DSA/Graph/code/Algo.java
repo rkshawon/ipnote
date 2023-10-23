@@ -1,4 +1,5 @@
 //Implementing Dijkstra Algorithm
+//fails with (-) negative value. gives TLE.
 class Pair {
     int node;
     int distance;
