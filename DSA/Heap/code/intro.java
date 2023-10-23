@@ -69,3 +69,47 @@ public class MyClass {
         System.out.println("After Delete: "+array);
     }
 }
+
+//build heap from array// Time Complexity: O(n)
+public class MinHeapBuilder {
+    public static void buildMinHeap(int[] array) {
+        int lastNonLeaf = (array.length / 2) - 1;
+
+        // Perform heapify on each non-leaf node in reverse order
+        for (int i = lastNonLeaf; i >= 0; i--) {
+            heapify(array, i);
+        }
+    }
+
+    public static void heapify(int[] array, int i) {
+        int size = array.length;
+        int smallest = i;
+        int leftChild = 2 * i + 1;
+        int rightChild = 2 * i + 2;
+
+        if (leftChild < size && array[leftChild] < array[smallest]) {
+            smallest = leftChild;
+        }
+
+        if (rightChild < size && array[rightChild] < array[smallest]) {
+            smallest = rightChild;
+        }
+
+        if (smallest != i) {
+            // Swap the elements at indices i and smallest
+            int temp = array[i];
+            array[i] = array[smallest];
+            array[smallest] = temp;
+
+            // Recursively heapify the affected subtree
+            heapify(array, smallest);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = {4, 10, 3, 5, 1};
+        buildMinHeap(array);
+
+        System.out.println("Min-Heap: " + Arrays.toString(array));
+    }
+}
