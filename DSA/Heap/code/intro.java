@@ -17,7 +17,6 @@ public class MyClass {
         }
 
         if (smallest != i) {
-            // Swap the elements at indices i and smallest
             int temp = array.get(i);
             array.set(i, array.get(smallest));
             array.set(smallest, temp);
@@ -75,7 +74,7 @@ public class MinHeapBuilder {
     public static void buildMinHeap(int[] array) {
         int lastNonLeaf = (array.length / 2) - 1;
 
-        // Perform heapify on each non-leaf node in reverse order
+       
         for (int i = lastNonLeaf; i >= 0; i--) {
             heapify(array, i);
         }
@@ -96,12 +95,11 @@ public class MinHeapBuilder {
         }
 
         if (smallest != i) {
-            // Swap the elements at indices i and smallest
+        
             int temp = array[i];
             array[i] = array[smallest];
             array[smallest] = temp;
 
-            // Recursively heapify the affected subtree
             heapify(array, smallest);
         }
     }
@@ -111,5 +109,64 @@ public class MinHeapBuilder {
         buildMinHeap(array);
 
         System.out.println("Min-Heap: " + Arrays.toString(array));
+    }
+}
+//Heap sort //TcO(n)
+public class HeapSort {
+    public static void heapSort(int[] array) {
+        int n = array.length;
+
+        // Build a max heap from the input array
+        buildMaxHeap(array);
+
+        // Extract elements from the heap one by one
+        for (int i = n - 1; i > 0; i--) {
+            // Swap the root (max element) with the last element in the unsorted portion of the array
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+
+            // Call maxHeapify on the reduced heap
+            maxHeapify(array, 0, i);
+        }
+    }
+
+    public static void buildMaxHeap(int[] array) {
+        int n = array.length;
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            maxHeapify(array, i, n);
+        }
+    }
+
+    public static void maxHeapify(int[] array, int i, int n) {
+        int largest = i;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+
+        if (left < n && array[left] > array[largest]) {
+            largest = left;
+        }
+
+        if (right < n && array[right] > array[largest]) {
+            largest = right;
+        }
+
+        if (largest != i) {
+            int temp = array[i];
+            array[i] = array[largest];
+            array[largest] = temp;
+
+            maxHeapify(array, largest, n);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = {12, 11, 13, 5, 6, 7};
+        heapSort(array);
+
+        System.out.println("Sorted array:");
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
     }
 }
