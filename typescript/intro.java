@@ -56,6 +56,7 @@ const add = (num:number, num2:number, optional?:number):number=>{
 }
 add(12,2)//now its optional
 
+//type can store value and object 
 type a = "j" | 'k'
 
 type UserType = {
