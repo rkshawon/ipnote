@@ -47,3 +47,26 @@ const [count, dispatch] = useReducer(reducer, initialState)
 to display use count 
 to perform action use dispatch("0")
 also possible dispatch({type:'', value:0})
+
+//useCallback
+useCallback is a hook that will return a memoized version of the callback function that only 
+changes if one of the dependencies has changed
+it is usefull when passing callbacks to optimized child components that rely on
+reference equality to prevent unnecessary renders
+const demo = useCallback(()=>{
+    functionality....
+},[dependencies])
+
+useCallback is used to memoize a callback function. 
+It is particularly useful when passing callbacks to child 
+components to prevent unnecessary re-renders of those components.
+
+//useMemo
+useMemo inokes provided function and caches its result
+when need to caches the result of an invoked function use memo
+
+//customhook
+its a js funcion whose name start with use
+it can call other hook if required
+why?
+to share logic between two or more components
