@@ -23,11 +23,12 @@ for (var i = 1; i <= 10; i++) {
     })
     customUI.appendChild(newElement);
 }
-The above code will associate the function with every <li> element that is shown in the below image. We are creating an <ul> element, attaching too many <li> elements, and attaching an event listener with a responding function to each paragraph as we create it.
+The above code will associate the function with every <li> element that is shown in the below image. We are creating an <ul> element,
+attaching too many <li> elements, and attaching an event listener with a responding function to each paragraph as we create it.
 
 const Debouncing and Throttling?
     *Debouncing is a technique that ensures a function is not executed until a certain amount of time has passed
-    since the last time the function was invoked. 
+    since the last time the function was invoked.
     *Debouncing is like waiting for a user to finish typing before performing a search.
     if the user types quickly, it will delay the search until they pause.
 
@@ -70,3 +71,6 @@ const Optional chaining?
     *If one of the references in the chain is null or undefined, the optional chaining operator will short circuit and return undefined.
     *It simplifies the process of accessing when the intermediate properties might be undefined or null
     *Started from ES11(2020)
+
+const Arrow Function?
+Link: "https://www.programiz.com/javascript/arrow-function"

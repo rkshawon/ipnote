@@ -22,3 +22,8 @@ const Nextjs?
     React is a powerful library for building user interfaces, Next.js extends its capabilities by providing
     a framework for building complete web applications with additional features such as server-side rendering,
     routing, and automatic code splitting
+
+const CSR, SSR, SSG, and ISR
+Whether you need Client-Side Rendering (CSR) for interactive experiences, Server-Side Rendering (SSR)
+ for fast initial page loads and SEO, Static Site Generation (SSG) for content-rich websites, or Incremental Static Regeneration (ISR)
+  for dynamic content, Next.js has you covered.
