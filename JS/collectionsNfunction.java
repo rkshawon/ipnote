@@ -55,6 +55,8 @@ const String Method?
     link: "https://www.programiz.com/javascript/library/string/length"
 
 
+Array.isArray() // to find if the object is array or not.
+
 let height = 0;
 
 halert(height || 100); // 100 check for falsy valye
