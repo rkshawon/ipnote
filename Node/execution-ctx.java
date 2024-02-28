@@ -35,14 +35,14 @@ inside Object -> function -> function - > undefined
 Scope: It is the area where a function or variable can be found.
 
 Scope Chain: 
-A scope chain refers to the unique spaces that exist from the scope where a variable got called to the global scope.
+A scope chain refers to the unique spaces that exist from the scope where a variable got called to the global scope.
 
 What is Lexical Scope in JavaScript?
-Lexical scope is the definition area of an expression.
-In other words, an items lexical scope is the place in which the item got created.
+Lexical scope is the definition area of an expression.
+In other words, an items lexical scope is the place in which the item got created.
 Note:
-• Another name for lexical scope is static scope.
-• The place an item got invoked (or called) is not necessarily the items lexical scope. Instead, an items definition space is its lexical scope.
+• Another name for lexical scope is static scope.
+• The place an item got invoked (or called) is not necessarily the items lexical scope. Instead, an items definition space is its lexical scope.
 
 From <https://www.freecodecamp.org/news/javascript-lexical-scope-tutorial/> 
 
@@ -59,12 +59,18 @@ console.log(varname);
 	• Redeclaration with same name does not count. Line 5 does is ghost;
 
 Temporal Dead Zone explained
+The temporal dead zone (TDZ) is a specific period in the execution of JavaScript code where variables declared
+ with let and const exist but cannot be accessed or assigned any value. During this phase, accessing or 
+ using the variable will result in a ReferenceError
 The state where variables are un-reachable. They are in scope, but they arent declared.
-The let and const variables exist in the TDZ from the start of their enclosing scope until they are declared.
+The let and const variables exist in the TDZ from the start of their enclosing scope until they are declared.
 
 From <https://www.freecodecamp.org/news/what-is-the-temporal-dead-zone/> 
 
-Shadowing: Now, when a variable is declared in a certain scope having the same name defined on its outer scope and when we call the variable from the inner scope, the value assigned to the variable in the inner scope is the value that will be stored in the variable in the memory space. This is known as Shadowing or Variable Shadowing. In JavaScript, the introduction of let and const in ECMAScript 6 along with block scoping allows variable shadowing.
+Shadowing: Now, when a variable is declared in a certain scope having the same name defined on its outer
+ scope and when we call the variable from the inner scope, the value assigned to the variable in the inner 
+ scope is the value that will be stored in the variable in the memory space. This is known as
+ Shadowing or Variable Shadowing. In JavaScript, the introduction of let and constin ECMAScript 6 along with block scoping allows variable shadowing.
 
 From <https://www.geeksforgeeks.org/variable-shadowing-in-javascript/> 
 
@@ -81,10 +87,10 @@ From <https://www.programiz.com/javascript/arrow-function>
 
 *String. length gives the total length including white space.
 
-A function definition (also called a function declaration, or function statement) 
+A function definition (also called a function declaration, or function statement) 
 
-function myFunction(p1, p2) {
-  return p1 * p2;
+function myFunction(p1, p2) {
+ return p1 * p2;
 }
 Function invocation/call
 myFunction(1,2);

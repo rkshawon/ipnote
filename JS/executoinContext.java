@@ -73,3 +73,22 @@ const V8 Engine?
 const Lexical environment?
 A Lexical environment in JavaScript is an internal data structure that keeps track of variables,
 values, and their scope within a specific part of code.
+
+const this keyword in constructor function vs constructor method?
+Inside the Constructor Function:
+When you have this.name = name; inside the constructor function, this refers to the specific instance of the object being created (in this case, person1).
+This usage of this is during the initialization phase of the object creation. Its setting up properties that are unique to each instance of the object. 
+Here, this is directly involved in setting the properties of the object being constructed.
+
+Inside the Method Defined in the Constructor Function:
+When you have this.sayName = function() { console.log(this.name); }; inside the constructor function,
+ this within the method refers to the object on which the method is called (in this case, person1).
+This usage of this is within a method attached to the object. Here, this is used to access other properties or
+ methods of the same object. In this specific example, its used to access the name property of the object to log it.
+
+While both usages of this ultimately refer to the same object (person1), theyre being used in different
+  contexts within the constructor function: one for initializing properties (this.name = name;) and the other
+   for defining a method that operates on those properties (this.sayName = function() { console.log(this.name); };).
+
+const Hoisting?
+Hoisting in JavaScript is a behavior in which a function or a variable can be used before declaration

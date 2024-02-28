@@ -55,3 +55,11 @@ const String Method?
     link: "https://www.programiz.com/javascript/library/string/length"
 
 
+let height = 0;
+
+halert(height || 100); // 100 check for falsy valye
+halert(height ?? 100); // 0 chack for null and undefined , does not checks for falsy value like 0 or ""
+
+let x = 1 && 2 ?? 3; // Syntax error
+let x = (1 && 2) ?? 3; // Works
+alert(x); // 2

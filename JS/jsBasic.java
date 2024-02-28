@@ -4,9 +4,10 @@ link: "https://www.guru99.com/javascript-interview-questions-answers.html"
 job application line: "https://bluethrone.io/careers"
 
 const JavaScript?
-*JavaScript is a programming language that is used for web development.
-it is a high-level, dynamically-typed synchonous single Threaded language that
-enables web developers to create interactive and dynamic content on websites.
+*JavaScript is a high-level, dynamically-typed programming language that is used for web development,
+and its enables developers to create interactive and dynamic content on websites.
+it is a synchonous in nature and single Threaded programming language that
+
 
 **JavaScript is an object-based language. Everything is an object in JavaScript.
 **JavaScript is template based not class. Here we dont create classes to get the object. But we can direct create objects.
@@ -175,3 +176,5 @@ Frameworks provide structure, consistency, and can accelerate development but ma
  The choice between libraries and frameworks should be based on your projects specific requirements and your teams familiarity with the technology.
  
 *****For large application framwork and small application library.
+
+

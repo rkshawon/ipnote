@@ -1,11 +1,25 @@
-const event = require("events");
+const Singleton = (function () {
+  let instance; // Private variable to hold the singleton instance
 
-const e = new event();
+  function createInstance() {
+    return {
+      message: "I am the only instance!",
+      showMessage: function () {
+        console.log(this.message);
+      },
+    };
+  }
 
-e.on("test", (p1, p2) => {
-  console.log("hello", p1, p2);
-});
-e.on("test", (p1) => {
-  console.log("hello", p1);
-});
-e.emit("test", "param1", "param2");
+  return {
+    getInstance: function () {
+      if (!instance) {
+        instance = createInstance();
+      }
+      return instance;
+    },
+  };
+})();
+
+const singleton1 = Singleton.getInstance();
+const singleton2 = Singleton.getInstance();
+console.log(singleton1 === singleton2); // true
