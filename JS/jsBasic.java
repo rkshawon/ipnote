@@ -32,6 +32,25 @@ const Compiler vs Interpreter?
 
 *The first JavaScript engines were simple interpreters, but all modern engines use (JIT) compilation for performance reasons.
 
+JIT STEP>>>>>>>>>>>>>>>>>
+Interpretation: Initially, code is executed by an interpreter, which reads and executes the code line by line.
+
+Profiling: The JIT compiler monitors the execution of the interpreted code and collects information about which
+ parts of the code are frequently executed (hot paths).
+
+Optimization: Based on the profiling data, the JIT compiler identifies hot paths and optimizes them by generating optimized
+ machine code tailored to the specific hardware and execution environment.
+
+Compilation: The optimized machine code is generated for the hot paths identified during profiling. 
+This machine code is much faster than the original interpreted code.
+
+Caching: The generated machine code is cached so that it can be reused for subsequent executions of the 
+same hot paths without the need for re-optimization.
+
+Execution: When the optimized machine code is needed, it is executed directly, bypassing the interpreter,
+ resulting in significant performance improvements.
+
+
 *A compiler takes in the entire program and requires a lot of time to analyze the source code.
     Whereas the interpreter takes a single line of code and very little time to analyze it.
 *Compiled code runs faster, while interpreted code runs slower.
@@ -55,7 +74,7 @@ const res = value || def;
 console.log(res);
 
 const || vs && vs ??(nullish coalescing operator)
-(||)If both true || returns first value. but if both side is false then || return last one. if either is false then true one is returned.
+(||)If both true || returns first value. but if both side is false then || return last one.if either is false then true one is returned.
 (&&)If both true && returns last value. but if both side is false then && return first value.if either is false then false one is returned.
 (??)If both true ?? returns first value. but if both side is false then ?? return last value.if either is false then true one is returned.
 
