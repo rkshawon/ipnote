@@ -86,6 +86,7 @@ This means that objects created from the same constructor function share a commo
 
 Prototype Chain in JavaScript is a hierarchical structure of object prototypes, enabling
 inheritance of properties and methods among objects
+Prototype itself is another object so the prototype has its own prototype. This is known prototype chaining. 
 
 const Contructor Function?
     * Contructor function is a function in javascript which is used to create several objects.

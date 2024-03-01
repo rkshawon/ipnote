@@ -49,6 +49,15 @@ const JavaScript Promise Versus Callback?
 const Promise Method()?
 int link:"https://medium.com/weekly-webtips/javascript-promises-promise-all-vs-promise-allsettled-vs-promise-race-vs-promise-any-d42b8e272bf8"
 
+**Async/Await is the extension of promises 
+**Async simply allows us to write promises-based code as if it was synchronous and it checks that 
+we are not breaking the execution thread.
+*The async keyword transforms a regular JavaScript function into an asynchronous function,
+ causing it to return a Promise.
+
+*The await keyword is used inside an async function to pause its execution and wait for a 
+Promise to resolve before continuing.
+
 const Trailling comma ?
     *Trailing commas in JavaScript refer to the practice of adding a comma after the last item in an array or object literal,
     as well as after the last parameter in a function declaration or call. 

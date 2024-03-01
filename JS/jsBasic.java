@@ -30,6 +30,42 @@ const Compiler vs Interpreter?
         code line-by-line as the code runs.
     *Just-in-time compilation (JIT): In JIT the intermediate representation is compiled to native machine code at runtime.
 
+Compilation vs. Interpretation:
+
+A compiler translates the entire source code into machine code or an intermediate representation before execution. 
+This results in a separate executable file or bytecode that can be executed independently of the original source code.
+An interpreter, on the other hand, reads the source code line by line and executes it directly without generating a
+ separate executable. It translates and executes the code simultaneously.
+
+Execution:
+
+Compiled code executes directly on the target machine without requiring the presence of the compiler.
+ Once compiled, the source code is transformed into machine code or bytecode, making the execution faster.
+Interpreted code requires the interpreter to be present on the target machine. The interpreter reads each
+ line of code and executes it on the fly, which may result in slower execution compared to compiled code.
+
+Error Detection:
+
+Compilation detects errors execution begins. all syntax errors 
+and some semantic errors are caught during the compilation process.
+Interpretation detects errors during the execution process. It may halt execution upon encountering 
+the first error, but it can potentially detect some errors that might be overlooked during compilation, 
+such as runtime errors.
+
+Portability:
+
+Compiled programs are often less portable as they are specific to the target machines architecture.
+ They may require recompilation to run on different platforms.
+Interpreted programs are generally more portable since the interpreter can run on different platforms,
+ allowing the same source code to be executed without modification on various systems.
+
+Memory Usage:
+
+Compiled programs generally require more memory since they include the entire program and all necessary 
+libraries in the executable file.
+Interpreted programs may require less memory since they only load portions of the code into memory as
+ needed during execution.
+
 *The first JavaScript engines were simple interpreters, but all modern engines use (JIT) compilation for performance reasons.
 
 *A compiler takes in the entire program and requires a lot of time to analyze the source code.

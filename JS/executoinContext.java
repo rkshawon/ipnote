@@ -107,3 +107,12 @@ const Garbage collection?
     Reference counting keeps track of how many references an object has; when an objects reference count drops to zero,
     it becomes eligible for removal. The Mark and Sweep algorithm, on the other hand, identifies and collects object
     that are no longer accessible from the root of the application.
+
+
+
+
+JIT the profiler observes code execution to identify hot code paths, 
+the baseline compiler quickly generates basic machine code for immediate execution,
+ and the optimizing compiler uses profiling data to produce highly optimized machine
+  code for the most frequently executed parts of the code. Together, these components 
+  work to dynamically improve the performance of JavaScript code at runtime.
