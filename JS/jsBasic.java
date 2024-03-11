@@ -153,7 +153,8 @@ const Lib vs FrameWork
 libraries target a specific functionality, while a framework tries to provide everything required to develop a complete application
 
 **Library:**
-- A library is a collection of reusable code that provides specific functions or features that developers can use in their applications.
+- A library is a collection of reusable code that provides specific functions or features that
+ developers can use in their applications.
 - Libraries are like a set of specialized functions that you call to perform specific tasks.
 
 **Framework:**

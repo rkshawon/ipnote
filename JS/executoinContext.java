@@ -116,3 +116,6 @@ the baseline compiler quickly generates basic machine code for immediate executi
  and the optimizing compiler uses profiling data to produce highly optimized machine
   code for the most frequently executed parts of the code. Together, these components 
   work to dynamically improve the performance of JavaScript code at runtime.
+
+  TSZ is the area where a variable is hoisted but not accessable until the variable
+  is initialized with a value
