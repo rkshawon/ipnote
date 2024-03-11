@@ -9,6 +9,47 @@ const Class?
     *Class declaration is not a part of JavaScript hoisting. So, it is required to declare the 
     class before invoking it.
 
+What is this keyword?
+Ans: The ‘this’ keyword is a special keyword that is automatically defined within the scope
+of every function and behaves differently depending on how the function is called. 
+The value of this is determined dynamically at runtime based on the invocation context
+of the function. The ‘this’ keyword in JavaScript refers to the current execution
+ context of a function.
+
+ function Pet(name) {
+  this.getName = () => {
+    this.name = name;
+    console.log(this.name);
+  };
+}
+const cat = new Pet("Fluffy");
+
+const { getName } = cat;
+getName();
+
+const person = {
+  name: "Jack",
+  age: 25,
+  innerFunc: () => {
+    console.log(this);
+    console.log(this.age);
+  },
+};
+person.innerFunc();
+output: Fluffy
+{}
+undefined
+
+Yes, you can say that within a constructor function, the behavior of this is consistent
+ between arrow functions and normal functions when the constructor is invoked using the
+  new keyword. In both cases, this refers to the newly created object.
+
+However, its important to note that the behavior of this differs between arrow functions
+ and normal functions outside of the context of a constructor function. In arrow functions,
+  this is lexically scoped and does not change its value, while in normal functions,
+   this depends on how the function is called and can change its value based on the 
+   caller or the context in which its invoked.
+
 const New Keyword?
 New keyword in JavaScript is used to create an instance of an object that has a constructor function
 while creating an object using Function Ccontructor new keyword does three things .
