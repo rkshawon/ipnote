@@ -132,3 +132,16 @@ const Contructor Function?
     * Contructor function is a function in javascript which is used to create several objects.
     * We can instantiate object and implement inheritance.
     * It can be normal function or function expression. 
+    * 
+Call Apply Bind?
+The behaviour of the apply() method in Javascript changes between strict and non-strict mode.
+ The strict mode can be enabled in Chrome by adding 'use strict;' on the top.
+
+ECMAScript 5 and later let scripts opt in to a new strict mode, which alters the semantics
+ of JavaScript in several ways to improve its resiliency and which make it easier to understand 
+ whats going on when there are problems. MDN Web Docs
+
+In strict mode, if null or undefined is passed as the first argument to the apply() method,
+ it will use the value as it is.
+In non-strict mode (default), if null or undefined is passed as the first argument
+ to the apply() method, it will be replaced with the global object.
