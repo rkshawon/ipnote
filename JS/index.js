@@ -1,3 +1,2 @@
-if (3 > 2 > 1) {
-  console.log(true);
-}
+const arr = [4, 5, 6, 8];
+console.log(arr.with(2, 55));
