@@ -1,3 +1,5 @@
+// React Fiber: https://github.com/acdlite/react-fiber-architecture
+
 const Hooks?
     React hooks are functions that enable functional components to manage
     state and side effects, allowing developers to use stateful logic and 
@@ -29,3 +31,5 @@ Props:
     Props are immutable and provide a way for parent components to communicate with and configure their children. 
     Child components receive props as arguments and use the data to render dynamically. Props help create a hierarchy 
     of components that can share and pass data throughout a React application.
+
+
