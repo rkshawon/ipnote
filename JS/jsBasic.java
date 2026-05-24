@@ -4,18 +4,12 @@ link: "https://www.guru99.com/javascript-interview-questions-answers.html"
 job application line: "https://bluethrone.io/careers"
 
 const JavaScript?
-*JavaScript is a high-level, dynamically-typed programming language that is used for web development,
-and its enables developers to create interactive and dynamic content on websites.
-it is a synchonous in nature and single Threaded programming language that
-
-
-**JavaScript is an object-based language. Everything is an object in JavaScript.
-**JavaScript is template based not class. Here we dont create classes to get the object. But we can direct create objects.
-
-*JavaScript is known for its flexibility, as it can be used for a wide range of tasks beyond web development,
-including server-side scripting (Node.js), desktop application development, and even
-IoT (Internet of Things) programming. It plays a crucial role in modern web development,
-making web pages more engaging and user-friendly.
+JavaScript is a high-level, dynamically typed, single-threaded programming language mainly used for web development.
+It helps developers create interactive and dynamic websites. JavaScript is object-based and prototype-based,
+allowing objects to be created without traditional classes. Although synchronous by default,
+it also supports asynchronous programming through callbacks, promises, and async/await.
+Beyond web development, JavaScript is widely used for server-side development with Node.js,
+desktop applications, mobile apps, and IoT development.
 
 *Fact, var a = b = 3;
 is actually shorthand for:
