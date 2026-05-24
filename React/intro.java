@@ -29,7 +29,5 @@ State:
 Props:
     Short for properties, props are a mechanism in React for passing data from a parent component to its child components.
     Props are immutable and provide a way for parent components to communicate with and configure their children. 
-    Child components receive props as arguments and use the data to render dynamically. Props help create a hierarchy 
-    of components that can share and pass data throughout a React application.
-
+    Child components receive props as arguments and use the data to render dynamically.
 
